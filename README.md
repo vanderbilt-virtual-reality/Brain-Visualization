@@ -1,13 +1,13 @@
 # Brain Visualization
 This repository serves as the main repository for the Brain Visualization project. Mentor: Ipek Oguz
 
-# Goal
+## Goal
 Read NRRD file and visualize neural connections in the brain through diffusion tensor imaging tractography in the VR environment.
 
-# Unity Version
+## Unity Version
 Unity 2018.4LTS
 
-# STEPS TAKEN 
+## STEPS TAKEN 
 * VR Environment Design - Our environment design was minimalistic. We created a black environment to host our environment in. We had our brain in the middle, sliders to the right and a file explorer to the left. We made the sliders big for the user to easily interface with it.
 * NRRD Format IO w/ C# - NRRD IO is handled by external python environment (v3.7, numpy). NRRD data is saved as NPY file, and handled by Accord.io in C#. Due to Accord.io’s limitation on type (int/long only), all data are multiplied by 10^15, and saved as long, remaining decimals are truncated. After reading, all values are divided by 10^15 to approximate original values. -Lingfeng
 * Display Module - In order to fit and display brain model in an efficient and timely manner, display module is separated into three components:
